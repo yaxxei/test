@@ -1,0 +1,405 @@
+body {
+	margin: 0;
+	font-family: 'Saira Stencil One', cursive;
+
+	font-size: 15px;
+	line-height: 1.6;
+	color: #fff;
+}
+
+*,
+*:before
+*:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+/* Container */
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Header */
+.header {
+	width: 100%;
+	padding-top: 30px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* Intro */
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+
+	background: url("../images/intro.jpeg") 
+	center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.intro__inner {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+.intro__title {
+	font-size: 120px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.intro__title:after {
+	content: "";
+	display: block;
+	width: 800px;
+	height: 5px;
+	margin: 10px auto 0;
+
+
+	background-color: #fff;
+}
+
+.intro__subtitle {
+	font-family: 'Lexend Zetta', sans-serif;
+	font-size: 60px;
+}
+
+/* Nav */
+
+.nav {
+	font-family: sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.nav__link {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px;
+	position: relative;
+
+	color: #fff;
+	text-decoration: none;
+
+	transition: color .2s linear;
+}
+
+.nav__link:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+
+	transform: scaleX(0);
+	background-color: #999;
+	transition: all .2s;
+}
+
+.nav__link:hover {
+	color: #999;
+}
+
+.nav__link:hover:after {
+	display: block;
+	transform: scaleX(1);
+}
+
+/*.home {
+	color: #999;
+}
+
+.home:before {
+	content: '';
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #999;
+}*/
+
+.nav__link.active {
+	color: #999;
+}
+
+.nav__link.active:before {
+	content: '';
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #999;
+}
+
+.intro__home {
+	display: none;
+}
+
+.intro__home.active {
+	display: block;
+}
+
+/* Button */
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	padding: 15px 50px;
+
+	border: 3px solid #fff;
+
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-top: 70px;
+
+	transition: background .1s linear,
+	color .1s linear;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+/* Shop */
+
+/*.intro__shop {
+	width: 80%;
+	height: 80vh;
+	background-color: rgba(255, 255, 255, .8);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex;
+}
+
+.intro__buy {
+	font-family: sans-serif;
+	font-size: 40px;
+	color: #000;
+
+	padding: 20px;
+}*/
+
+/* Form */
+
+/*.form_group {
+	margin-bottom: 10px;
+	color: #000;
+}
+
+.form_control {
+	background-color: rgba;
+	border: 1px solid #fff;
+	border-radius: 3px;
+}
+
+.form_control:focus {
+	outline: none;
+}*/
+
+/* Section */
+
+.section {
+	padding: 80px 0;
+	color: #000;
+
+	 /*background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);*/
+
+    background: linear-gradient(45deg, #f1f1f1, #999);
+}
+
+.section__header {
+	width: 100%;
+	min-width: 950px;
+	margin: 0 auto 40px;
+	
+	text-align: center;
+}
+
+.section__suptitle {
+	font-family: sans-serif;
+	font-size: 24px;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.section__suptitle:before {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 1px;
+	background-color: #000;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.section__suptitle:after {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	height: 1px;
+	background-color: #000;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+.section__title {
+	font-family: 'Lexend Zetta', sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: #000;
+}
+
+.section__subtitle {
+	font-family: 'Saira Stencil One', sans-serif;
+	font-size: 15px;
+	color: #000;
+}
+
+/* Input */
+
+.form {
+	padding: 2rem 1rem 0;
+
+	margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+}
+
+.form_group+.input {
+	margin-top: 1.5rem;
+}
+
+.input_label {
+	color: #000;
+	position: absolute;
+	top: 1.5rem;
+	transition: .25s ease;
+	margin-top: 5px;
+}
+
+.product {
+	margin-top: -20px;
+}
+
+.payment {
+	margin-top: -20px;
+}
+
+.form_control {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 2px solid #555; 
+	font: inherit;
+	font-size: 1.125rem;
+	padding: .25rem 0;
+	margin-bottom: 5px;
+}
+
+.form_control:focus,
+.form_control:valid {
+	outline: 0;
+	border-bottom-color: #000;
+}
+
+.form_control+.input_label {
+	color: #000;
+	transform: translateY(-1.5rem);
+}
+
+/* Select */
+
+select {
+	appearance: none;
+	background-color: transparent;
+  	border: none;
+  	padding: 0 1em 0 0;
+  	margin: 10px 0;
+  	width: 100%;
+  	font-family: inherit;
+  	font-size: inherit;
+  	cursor: inherit;
+  	line-height: inherit;
+
+  	outline: none;
+  	border-bottom: 2px solid #555;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+/* Button */
+
+.action {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.action_btn {
+	font-family: sans-serif;
+	font-size: 15px;
+	padding: 1em;
+	width: 100%;
+	font-weight: 500;
+	background-color: #000;
+	border-radius: 6px;
+	color: #FFF;
+	border: 0;
+}
+
+.action_btn:focus {
+	outline: 0;
+}
